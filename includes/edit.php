@@ -1,7 +1,6 @@
 <?php
     define('TITLE','EROL | Ubah Data Peminjaman');
     include('operation.php');
-    date_default_timezone_set('Asia/Jakarta');
     $companyName = "DAP - AWP Collaboration";
     
     if(isset($_GET['pesanId'])){

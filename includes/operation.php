@@ -20,7 +20,7 @@
 
         //Fungsi Read
         public function readData(){
-            $sql = "SELECT * FROM pesan ORDER BY timeInput ASC";
+            $sql = "SELECT * FROM pesan ORDER BY timeInput DESC";
             $query = $this->db->query($sql);
             return $query;
         }

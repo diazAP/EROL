@@ -1,6 +1,5 @@
 <?php
     $companyName = "DAP - AWP Collaboration";
-    date_default_timezone_set('Asia/Jakarta');
 ?>
 
 
