@@ -76,17 +76,19 @@
         jika terdapat data yg belum terisi akan mengeluarkan peringatan*/
         if(!$fname || !$nim || !$penting || !$jadwal || !$sesi || !$ruang){
             echo "<script>alert('Mohon untuk mengisi semua data dengan lengkap.');</script>";
+        }else{
+            if($cekRow >= 1) {
+                echo "<script>alert('Pilihan sudah dipinjam. Mohon pilih jadwal/sesi/ruangan lain.');</script>";   
+            }else{
+                $cd = $erol->createData($fname, $nim, $penting, $jadwal, $sesi, $ruang);
+                if($cd){
+                    header('Location: daftar.php');
+                }
+            }
         }
 
         //Fungsi mengisi data jika tidak ada data yang sama pada database
-        if($cekRow >= 1) {
-            echo "<script>alert('Pilihan sudah dipinjam. Mohon pilih jadwal/sesi/ruangan lain.');</script>";   
-        }else{
-            $cd = $erol->createData($fname, $nim, $penting, $jadwal, $sesi, $ruang);
-            if($cd){
-                header('Location: daftar.php');
-            }
-        }
+        
     }
     include('includes/footer.php');
 ?>
