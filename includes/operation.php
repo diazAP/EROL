@@ -2,7 +2,7 @@
     //Kelas Erol
     class Erol{
         public function __construct(){
-            $this->db = new PDO('mysql:host=*host*;dbname=*dbname*','*username*','*password*');
+            $this->db = new PDO('mysql:host=*remotemysql.com;dbname=GJTTDgwX7O','GJTTDgwX7O','3btW82kIqM');
         }
         
         /*Mendefinisikan fungsi untuk mencegah para hacker
